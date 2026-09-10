@@ -130,7 +130,7 @@ const Homehero = () => {
 </section>
 
 
-<hr class="mx-auto w-full max-w-[500px] h-[2px] border-0 bg-[#6ecddd]"></hr>
+<hr className="mx-auto w-full max-w-[500px] h-[2px] border-0 bg-[#6ecddd]"></hr>
 
 
 
