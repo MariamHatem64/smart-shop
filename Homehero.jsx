@@ -48,9 +48,9 @@ const Homehero = () => {
 >
 
     {heroSlides.map((slid)=>(
-    <SwiperSlide key={slid.image}>
+    <SwiperSlide key={slid.image} className="!w-full !max-w-full overflow-hidden">
       
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-between px-5 md:px-10 lg:px-16  xl:px-[240px] gap-8 lg:gap-0 py-[100px] ">
+     <div className="w-full max-w-full box-border flex flex-col-reverse lg:flex-row items-center justify-between px-5 md:px-10 lg:px-16 xl:px-[240px] gap-8 lg:gap-0 py-[100px]">
 
         <div className="text-center lg:text-start ">
           <p className="text-xl md:text-2xl lg:text-4xl font-light lg:ms-[50px] mb-3"> {slid.topText}  </p>
@@ -72,11 +72,12 @@ const Homehero = () => {
 
 
        <div className="w-full max-w-[380px] md:w-[400px] lg:w-[500px]">
-          <img
-            src={slid.image}
-            className="w-full"
-          />
-        </div>
+  <img
+    src={slid.image}
+    className="block w-full max-w-full h-auto"
+    alt=""
+  />
+</div>
 
       </div>
      
