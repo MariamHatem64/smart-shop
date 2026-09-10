@@ -39,51 +39,52 @@ const Homehero = () => {
    <>
    
    
-  <Swiper
+ <Swiper
   className="heroSwiper"
   modules={[Navigation, Pagination]}
   navigation
   pagination
   slidesPerView={1}
 >
+  {heroSlides.map((slid) => (
+    <SwiperSlide key={slid.image}>
 
-    {heroSlides.map((slid)=>(
-    <SwiperSlide key={slid.image} className="!w-full !max-w-full overflow-hidden">
-      
-     <div className="w-full max-w-full box-border flex flex-col-reverse lg:flex-row items-center justify-between px-5 md:px-10 lg:px-16 xl:px-[240px] gap-8 lg:gap-0 py-[100px]">
+      <div className="w-full box-border flex flex-col-reverse lg:flex-row items-center justify-between px-5 md:px-10 lg:px-16 xl:px-[240px] gap-8 lg:gap-0 py-[100px]">
 
-        <div className="text-center lg:text-start ">
-          <p className="text-xl md:text-2xl lg:text-4xl font-light lg:ms-[50px] mb-3"> {slid.topText}  </p>
+        <div className="text-center lg:text-start">
+          <p className="text-xl md:text-2xl lg:text-4xl font-light lg:ms-[50px] mb-3">
+            {slid.topText}
+          </p>
 
           <p className="text-3xl md:text-3xl lg:text-5xl font-normal">
             {slid.title}
           </p>
 
           <p className="text-xl md:text-2xl lg:text-4xl font-light lg:ms-[50px] my-5">
-           {slid.bottomText}
+            {slid.bottomText}
           </p>
 
-          <button className="text-sm md:text-base bg-[#6ecddd] text-white px-7 md:px-9 py-3 rounded-full lg:ms-[100px]"
-           onClick={() => {
-    navigate("/Product")}}>
+          <button
+            className="text-sm md:text-base bg-[#6ecddd] text-white px-7 md:px-9 py-3 rounded-full lg:ms-[100px]"
+            onClick={() => navigate("/Product")}
+          >
             اكتشف الان
           </button>
         </div>
 
-
-       <div className="w-full max-w-[380px] md:w-[400px] lg:w-[500px]">
-  <img
-    src={slid.image}
-    className="block w-full max-w-full h-auto"
-    alt=""
-  />
-</div>
+        <div className="w-full max-w-[380px] md:w-[400px] lg:w-[500px]">
+          <img
+            src={slid.image}
+            className="block w-full h-auto"
+            alt=""
+          />
+        </div>
 
       </div>
-     
+
     </SwiperSlide>
- ))}
-    </Swiper>
+  ))}
+</Swiper>
 
 
 <section className="flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row items-center justify-center gap-8 sm:px-8 md:px-12 lg:px-0 lg:gap-10 xl:gap-[110px] mt-[60px] lg:mt-[100px] mb-[60px] lg:mb-[100px] ">

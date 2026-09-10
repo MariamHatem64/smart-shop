@@ -4,7 +4,11 @@
   overflow: hidden !important;
 }
 
-
+.heroSwiper .swiper-slide {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
 
 .heroSwiper .swiper-pagination {
   width: auto !important;
