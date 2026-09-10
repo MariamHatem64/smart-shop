@@ -1,0 +1,37 @@
+.productSwiper {
+  padding-bottom: 70px !important;
+}
+
+.productSwiper .swiper-pagination {
+  bottom: 10px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  counter-reset: pagination;
+}
+
+.productSwiper .swiper-pagination-bullet {
+  width: 35px;
+  height: 35px;
+  margin: 0 !important;
+  opacity: 1;
+  background: white;
+  border: 1px solid #6ecddd;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6ecddd;
+  font-size: 15px;
+  counter-increment: pagination;
+}
+
+.productSwiper .swiper-pagination-bullet::after {
+  content: counter(pagination);
+}
+
+.productSwiper .swiper-pagination-bullet-active {
+  background: #6ecddd;
+  color: white;
+}
