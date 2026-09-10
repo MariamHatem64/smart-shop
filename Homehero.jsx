@@ -41,10 +41,11 @@ const Homehero = () => {
    
   <Swiper
   className="heroSwiper"
-    modules={[Navigation, Pagination]}
-    navigation
-    pagination
-  >
+  modules={[Navigation, Pagination]}
+  navigation
+  pagination
+  slidesPerView={1}
+>
 
     {heroSlides.map((slid)=>(
     <SwiperSlide key={slid.image}>
